@@ -1,0 +1,128 @@
+/* Background and layout */
+.equipments-container {
+  padding: 40px 20px;
+  background: linear-gradient(-45deg, #f0f8ff, #e6f2ff, #d1e0e0, #f3f3f3);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  min-height: 2000vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .equipments-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* Grid layout */
+  .equipments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    width: 200%;
+    max-width: 1500px;
+  }
+  
+  @media (max-width: 1024px) {
+    .equipments-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .equipments-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .equipments-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Card styling */
+  .equipment-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image */
+  .equipment-image {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .equipment-card:hover .equipment-image {
+    transform: scale(1.05);
+  }
+  
+  /* Text */
+  .equipment-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  
+  .equipment-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .equipment-price {
+    font-size: 1.1rem;
+    color: #0077cc;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* CTA button - new look */
+  .add-to-cart-btn {
+    background: linear-gradient(135deg, #0077cc, #005fa3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #005fa3, #004080);
+  }
+  .equipment-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+ 
+  
+  

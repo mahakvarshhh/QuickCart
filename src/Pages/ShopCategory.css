@@ -1,0 +1,21 @@
+.shop-category {
+    padding: 2rem;
+    background: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  

@@ -1,0 +1,169 @@
+.shop-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f2f7fd, #e8f0ff);
+  min-height: calc(100vh - 100px);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.shop-container::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 203, 203, 0.25);
+  top: -80px;
+  left: -80px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.shop-container::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(173, 216, 230, 0.25);
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.shop-filter select {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.shop-filter option {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shop-filter label {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.shop-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeDown 0.8s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.shop-hero h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+}
+
+.shop-hero p {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+}
+
+.shop-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.highlight-card {
+  background: white;
+  border-radius: 18px;
+  padding: 50px;
+  text-align: center;
+  width: 280px;
+  text-decoration: none;
+  color: #333;
+  animation: fadeUp 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  background-color: #f0faff;
+  border: 2px solid #3c8ed9;
+  box-shadow: 0 10px 26px rgba(60, 142, 217, 0.2);
+}
+
+.highlight-card img {
+  height: 160px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight-card:hover img {
+  transform: scale(1.1);
+}
+
+.highlight-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2d4059;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shop-hero h1 {
+    font-size: 2rem;
+  }
+
+  .shop-hero p {
+    font-size: 1rem;
+  }
+
+  .highlight-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  .fade-up {
+    animation: fadeUp 0.6s ease-in-out;
+  }
+  
+}
